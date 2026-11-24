@@ -7,7 +7,10 @@ Writes one number, digits only, to $MAKEFUN_OUTPUT_DIR/entry.txt
 
 import os
 
-TAB_COUNT = 184
+# The honest count: 237 open tabs. Odd, specific, and in the range a real
+# tab hoarder lives in -- a few windows of research, docs, and "read later"
+# tabs that never get read. Not a round number, not a shock number.
+TAB_COUNT = 237
 
 
 def main() -> None:
