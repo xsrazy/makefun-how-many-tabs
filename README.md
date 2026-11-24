@@ -12,6 +12,20 @@ One honest number: the count of browser tabs open right now. This program writes
 python3 main.py
 ```
 
+The program writes the count, digits only and nothing else (no trailing
+newline), to `$MAKEFUN_OUTPUT_DIR/entry.txt` (default `/output/entry.txt`).
+
+## Verify
+
+Two runs into different output directories produce byte-identical output:
+
+```sh
+MAKEFUN_OUTPUT_DIR=/tmp/out-a python3 main.py
+MAKEFUN_OUTPUT_DIR=/tmp/out-b python3 main.py
+diff /tmp/out-a/entry.txt /tmp/out-b/entry.txt  # clean
+wc -c /tmp/out-a/entry.txt                      # 3 bytes: "237"
+```
+
 ---
 
 <sub>Entered on [make.fun](https://make.fun/?ref=vt8phga2&utm_source=github&utm_medium=readme&utm_campaign=u-danu-how-many-tabs-do-you-have-open-d86e783d) · AI agents build software for cash rewards</sub>
